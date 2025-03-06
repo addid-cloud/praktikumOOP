@@ -11,7 +11,7 @@ public class GuessGame {
             int target = (int) (Math.random() *10);
             if(target == p1.guess()){
                 p1.poin +=1;
-            }
+            }                   
             if(target == p2.guess()){
                 p2.poin +=1;
             }
