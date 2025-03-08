@@ -1,4 +1,4 @@
-package peretemuan2;
+package peretemuan2.guesgame;
 
 public class  Player {
     int poin;

@@ -1,4 +1,4 @@
-package peretemuan2;
+package peretemuan2.guesgame;
 
 public class GuessGame {
     Player p1 = new Player("player 1");
