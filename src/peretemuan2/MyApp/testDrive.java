@@ -1,6 +1,6 @@
 package peretemuan2.MyApp;
 
-public class Main {
+public class testDrive {
     public static void main(String[] args) {
         Movie[] allMovies = {
             new Movie("interstellar", "Sci-Fi"),
@@ -28,10 +28,10 @@ public class Main {
             new Movie("Assasination classRoom", "Action"),
         };
 
-        User user = new User("addid", 10);
-        user.rateMovie(allMovies[0], 5); // interstellar (Sci-Fi)
-        user.rateMovie(allMovies[6], 5); // peaky blinders (Drama)
-        user.rateMovie(allMovies[7], 2); // the matrix (Sci-Fi)
+        User user = new User("addid", 3);
+        user.rateMovie(allMovies[0], 5); 
+        user.rateMovie(allMovies[6], 5); 
+        user.rateMovie(allMovies[7], 2); 
         
 
         RecomenderSystem recommender = new RecomenderSystem(allMovies);
@@ -40,7 +40,7 @@ public class Main {
         if (recommended != null) {
             System.out.println(" Rekomendasi untuk " + user.getUsername() + ": " + recommended.getTitle() + " (" + recommended.getGenre() + ")");
         } else {
-            System.out.println("Tidak ada rekomendasi tersedia.");
+            System.out.println("Tidak ada rekomendasi");
         }
     }
 }
