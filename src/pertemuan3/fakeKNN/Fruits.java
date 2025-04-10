@@ -3,7 +3,7 @@ package pertemuan3.fakeKNN;
 public class Fruits {
     private double crunchy;
     private double sweetnest;
-    public String name;
+    private String name;
     // ini konstruktor buat meng init biar dia 
     Fruits(double crunchy, double sweetnest, String name){
         this.crunchy = crunchy;
@@ -18,6 +18,15 @@ public class Fruits {
         double difSweetnest = this.sweetnest - other.sweetnest;
         hasil =Math.sqrt(difCrunchy*difCrunchy + difSweetnest*difSweetnest); 
         return hasil;
+    }
+    public void setCrunchy(double crunchy) {
+        this.crunchy = crunchy;
+    }
+    public void setSweetnest(double sweetnest) {
+        this.sweetnest = sweetnest;
+    }
+    public String getName() {
+        return name;
     }
 
 }

@@ -75,19 +75,17 @@ public class Main {
 
 
     // method ini buat nentuin buah apa yang akan ditampilin jika crunch sama sweetnya diketahui
-    public static Fruits choseFruit(Fruits[] fruits, double inputCrunch, double inputSweet){
-        Fruits unknown = new Fruits(inputCrunch, inputSweet, "unknown");
-        System.out.println("crunch : " + inputCrunch +  " sweet : " + inputSweet);
-        Fruits closestFruit = fruits[0];
-        double minDistance = 10;  // ini nilai awal 10 karena batas maks buat krunch sama sweet itu 10
-        for(Fruits fruit : fruits ){
+    public static void choseFruit(Fruits[] fruits, double inputC, double inputS){
+        Fruits unknown = new Fruits(inputC, inputS, "unknown");
+        Fruits fruitU = null;
+        double minD = 10;
+        for (Fruits fruit : fruits) {
             double distance = unknown.calculateDistance(fruit);
-            if(distance < minDistance){
-                minDistance = distance;
-                closestFruit = fruit;
+            if(distance < minD){
+                minD = distance;
+                fruitU = fruit;
             }
         }
-        System.out.println("buah = "  + closestFruit.name);
-        return closestFruit;
+        System.out.println(fruitU.getName());
     }
 }
